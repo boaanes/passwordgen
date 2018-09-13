@@ -6,7 +6,7 @@ chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 
 pws = []
 
-def pwgen(length):
+def passwords(length):
     pw = ""
 
     i = 0
@@ -22,20 +22,20 @@ def pwgen(length):
 
     pws.append(pw)
 
-def gen(num, length):
+def generate(num, length):
     string = ""
 
     for i in range(num):
-        pwgen(length)
+        passwords(length)
 
     for i in range(len(pws)):
         string += "Password " + str(i + 1) + ": " + pws[i] + "\n"
 
     return string
 
-def writefile(num, length):
+def writefile(str):
     file = open('passwords.txt', "w")
-    file.write(gen(num, length) + "\n")
+    file.write(str + "\n")
     file.close()
 
-writefile(10, 15)
+writefile(generate(10, 15))
