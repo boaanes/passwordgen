@@ -1,3 +1,3 @@
 # Password Generator
 
-Working on a simple password generator
+Working on a very simple password generator
